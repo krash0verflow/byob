@@ -1,0 +1,13 @@
+[Unit]
+Description=BYOB Server - Open Source
+After=network.target
+
+[Service]
+User=byob_username
+WorkingDirectory=/home/byob_username/byob/web-gui/
+ExecStart=/usr/bin/sh /home/byob_username/byob/web-gui/service.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
